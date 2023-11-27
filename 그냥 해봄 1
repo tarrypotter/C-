@@ -1,0 +1,36 @@
+// 기본코드 활용 
+#include <iostream>
+using namespace std;
+
+int main() {
+   //std::cout << "Hello World!"; // using namespace를 하지 않았을때 
+   cout << "Hello World!\n\n";  // 두번 줄넘기기
+   cout << "Hello World!\n"; // 한번 줄넘기기
+   cout << "Hello World!" << endl; // 줄넘기기 
+  return 0;
+}
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+//다중 namespace 활용 
+#include <iostream>
+ namespace aaa {
+   void AAAFunc(void) 
+   {
+      std::cout << "aaa" <<std::endl;
+   }
+  }
+  
+  namespace bbb {
+   void AAAFunc(void) 
+   {
+      std::cout << "bbb" <<std::endl;
+   }
+  }
+  
+ int main()
+ {
+    aaa :: AAAFunc();
+    bbb :: AAAFunc();
+    return 0 ;
+ }
